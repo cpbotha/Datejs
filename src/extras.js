@@ -245,7 +245,7 @@
                 return ($D.isLeapYear(x.getFullYear())) ? 1 : 0;
             case "o":
             case "%G":
-                return x.setWeek(x.getISOWeek()).toString("yyyy");
+                return x.clone().setWeek(x.getISOWeek()).toString("yyyy");
             case "%g":
                 return x.$format("%G").slice(-2);
             case "Y":
